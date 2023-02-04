@@ -6,5 +6,9 @@ urlpatterns = [
     path('post/<str:pk>', views.get_post, name="post"),
     path('category/<str:pk>', views.get_category, name="category"),
     path('create_post/', views.CreatePost.as_view(), name="create-post"),
-    path('funcion_post_create/', views.postCreate, name="function-post-create")
+    path('funcion_post_create/', views.postCreate, name="function-post-create"),
+    path('login/', views.MyTokenObtainPairView.as_view(),
+         name='token_obtain_pair'),
+    path('register/', views.registerUser, name='register'),
+
 ]
